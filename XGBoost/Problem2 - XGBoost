@@ -18,7 +18,6 @@ df['Roadwork_Encoded'] = le_roadwork.fit_transform(df['Roadwork and Construction
 X = df[['Traffic Volume', 'Average Speed', 'Travel Time Index', 'Congestion Level', 'Weather_Encoded', 'Roadwork_Encoded', 'Traffic Signal Compliance']]
 y = df['Incident Reports']
 
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 le_target = LabelEncoder()
